@@ -4,6 +4,6 @@ import org.openqa.selenium.WebDriver;
 
 public abstract class DriverManager {
     protected WebDriver driver;
-    protected abstract void setupWebDriver();
-    
+    public enum driverType{CHROME, OPERA, FIREFOX;}
+    public abstract void setupWebDriver();
 }
