@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class test extends BaseTestModel {
     @Test
     public void test(){
-        driverManager = DriverManangerFactory.getDriverManager(DriverManangerFactory.driverType.EDGE);
+        driverManager = DriverManangerFactory.getDriverManager(DriverManangerFactory.driverType.FIREFOX);
         driver = driverManager.getWebDriver();
         driver.get("https://www.google.se");
     }

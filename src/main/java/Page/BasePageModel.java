@@ -9,10 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BasePageModel {
-    private WebDriver driver;
+public abstract class BasePageModel {
+    protected WebDriver driver;
 
-    public BasePageModel(WebDriver driver){
+    protected BasePageModel(WebDriver driver){
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
@@ -52,4 +52,5 @@ public class BasePageModel {
             System.out.println(locator.toString() + "Has not been found");
         }
     }
+    public abstract boolean isLoaded();
 }

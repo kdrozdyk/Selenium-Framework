@@ -8,9 +8,9 @@ public class DriverManangerFactory {
             case CHROME:
                 driverManager = new ChromeDriverManager();
                 break;
-            case EDGE:
+            /*case EDGE:
                 driverManager = new EdgeDriverManager();
-                break;
+                break;*/
             case FIREFOX:
                 driverManager = new FirefoxDriverManager();
                 break;
