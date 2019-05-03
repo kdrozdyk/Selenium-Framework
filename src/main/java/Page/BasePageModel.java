@@ -22,7 +22,7 @@ public class BasePageModel {
         if(timeOut < 0 || timeOut > 15){
             timeOut = 15;
         }
-        WebDriverWait wait = new WebDriverWait(driver, 15);
+        WebDriverWait wait = new WebDriverWait(driver, timeOut);
         try {
             wait.until(ExpectedConditions.elementToBeClickable(locator));
             returnElement = driver.findElement(locator);
