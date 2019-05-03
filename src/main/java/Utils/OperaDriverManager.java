@@ -5,7 +5,8 @@ import org.openqa.selenium.opera.OperaOptions;
 
 public class OperaDriverManager extends DriverManager {
     @Override
-    protected void setupWebDriver() {
+    public void setupWebDriver() {
+        System.setProperty("webdriver.opera.driver", "Resources/operadriver.exe");
         OperaOptions options = new OperaOptions();
         this.driver = new OperaDriver(options);
     }

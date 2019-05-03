@@ -6,8 +6,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class ChromeDriverManager extends DriverManager {
 
     @Override
-    protected void setupWebDriver() {
-        System.setProperty("webdriver.chrome.driver", "Resuorces");
+    public void setupWebDriver() {
+        System.setProperty("webdriver.chrome.driver", "Resources/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         this.driver = new ChromeDriver(options);
     }
