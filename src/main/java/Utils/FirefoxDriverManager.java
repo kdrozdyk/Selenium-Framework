@@ -3,6 +3,8 @@ package Utils;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+// // This class contains settings for ChromeDriver which you will invoke to run your tests in Firefox
+
 public class FirefoxDriverManager extends DriverManager{
     @Override
     public void setupWebDriver() {
