@@ -1,11 +1,6 @@
 package Utils;
 
-// A class that manages the different Driver Managers.
-
 public class DriverManangerFactory {
-
-    // By creating enums that identify each and every one of the available browsers in the framework we
-    // enable the following method that using this identification runs one of the Manager classes.
 
     public enum driverType{CHROME, EDGE, FIREFOX;}
     public static DriverManager getDriverManager(driverType type){

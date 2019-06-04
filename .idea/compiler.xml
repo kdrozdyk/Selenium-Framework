@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Selenium-Framework" />
+        <module name="Selenium-Framework-2" />
         <module name="selenium_framework_kd" />
       </profile>
     </annotationProcessing>
