@@ -1,5 +1,6 @@
 package Page;
 
+import Utils.DateUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -50,7 +51,16 @@ public abstract class BasePageModel {
             System.out.println(locator.toString() + "Has not been found");
         }
     }
-
+    public void sendDate(final By locator, final int timeOut, DateUtils.period period, String format){
+        String date = "";
+        WebElement element = getElement(locator, timeOut);
+        date = DateUtils.returnTheDate(period, format);
+        if (element != null && date != ""){
+            element.sendKeys(date);
+        }
+        else {
+            System.out.println("Please check that the path to the element is correct and every input is correct.    ");
+        }
+    }
     public abstract boolean isLoaded();
-
 }
